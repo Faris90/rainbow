@@ -613,7 +613,7 @@ GameServer.prototype.shootVirus = function(parent) {
     var newVirus = new Entity.Virus(this.getNextNodeId(), null, parentPos, this.config.virusStartMass);
     newVirus.setAngle(parent.getAngle());
     newVirus.setMoveEngineData(200, 20);
-	
+	    newVirus.setColor(this.getRandomColor());
     // Add to moving cells list
     this.addNode(newVirus);
     this.setAsMovingNode(newVirus);
