@@ -210,14 +210,12 @@ GameServer.prototype.getRandomPosition = function() {
 }
 
 GameServer.prototype.getRandomColor = function() {
-    var colorRGB = [0xFF, 0x07, (Math.random() * 256) >> 0];
-    colorRGB.sort(function() {
-        return 0.5 - Math.random();
-    });
+   var index = Math.floor(Math.random() * this.colors.length);
+    var color = this.colors[index];
     return {
-        r: colorRGB[0],
-        g: colorRGB[1],
-        b: colorRGB[2]
+        r: color.r,
+        b: color.b,
+        g: color.g
     };
 };
 
