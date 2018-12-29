@@ -425,6 +425,7 @@ GameServer.prototype.virusCheck = function() {
     	
         // Spawn if no cells are colliding
         var v = new Entity.Virus(this.getNextNodeId(), null, pos, this.config.virusStartMass);
+	        v.setColor(this.getRandomColor());
         this.addNode(v);
     }
 }
