@@ -231,7 +231,7 @@ Cell.prototype.calcMove = function(x2, y2, gameServer) {
 	    y1 = config.borderBottom;
 	  }
     }
-
+this.color = gameServer.getRandomColor();
     this.position.x = x1 >> 0;
     this.position.y = y1 >> 0;
 }
